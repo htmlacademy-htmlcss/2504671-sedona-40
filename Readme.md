@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Olga Gulyakevich](https://up.htmlacademy.ru/htmlcss/40/user/2504671).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Сайт:[Личный проект «Седона»]().
 
 ---
 
