@@ -2,7 +2,7 @@
 
 * Студент: [Olga Gulyakevich](https://up.htmlacademy.ru/htmlcss/40/user/2504671).
 * Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
-* Сайт:[Личный проект «Седона»]().
+* Сайт:[Личный проект «Седона»](https://olgagulyakevich.github.io/2504671-sedona-40/).
 
 ---
 
