@@ -18,7 +18,7 @@
       <nav class="page-navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link active" href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -46,6 +46,7 @@
     </header>
 
     <main class="data-test">
+      <div class="wrapper">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs-list">
@@ -88,7 +89,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-filter-type">
+          <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип Жилья</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -112,17 +113,17 @@
             </ul>
           </fieldset>
 
-          <fieldset class="catalog-filter-price">
+          <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
 
-            <input class="control-input" type="number" id="price-min" min="0" max="9000" value="0" name="price-min"
+            <input class="control-input-price" type="number" id="price-min" min="0" max="9000" value="0" name="price-min"
               placeholder="0">
-            <label class="control" for="price-min">от</label>
-            <input class="control-input" type="number" id="price-max" min="0" max="9000" value="9000" name="price-max"
+            <label class="control-from" for="price-min">от</label>
+            <input class="control-input-price" type="number" id="price-max" min="0" max="9000" value="9000" name="price-max"
               placeholder="9000">
-            <label class="control" for="price-max">до</label>
+            <label class="control-till" for="price-max">до</label>
             <label class="control-price-range">
-              <input class="control-input" type="range" min="0" max="9000" value="6750" name="price-range">
+              <input class="control-input-range" type="range" min="0" max="9000" value="6750" name="price-range">
             </label>
           </fieldset>
 
@@ -134,27 +135,34 @@
           </button>
         </form>
       </section>
+    </div>
 
       <section class="catalog-hotel data-test">
         <h2 class="catalog-hotel-title">
           Найдено гостиниц: <output>38</output>
         </h2>
 
+      <div class="container-sort">
         <select class="select-control" aria-label="Сортировка">
           <option value="cheap">Сначала дешевые</option>
           <option value="expensive">Сначала дорогие</option>
           <option value="popular">Сначала популярные</option>
         </select>
 
+
         <a href="catalog.html?view=tile" class="sort button-tile sort-current">
           <span class="visually-hidden">Показать плиткой</span>
+          <span class="tile-icon"></span>
         </a>
         <a href="catalog.html?view=card" class="sort button-card">
           <span class="visually-hidden">Показать карточками</span>
+          <span class="card-icon"></span>
         </a>
         <a href="catalog.html?view=list" class="sort button-list">
           <span class="visually-hidden">Показать списком</span>
+          <span class="list-icon"></span>
         </a>
+      </div>
 
         <ul class="hotel-list">
           <li class="hotel-item">
@@ -163,15 +171,15 @@
                 alt="Звездное небо в расщелине гор">
               <h3 class="hotel-list-title">Amara Resort & Spa</h3>
             </a>
-            <p>Гостиница</p>
-            <b>От 4000 ₽</b>
+            <p class="hotel-list-description">Гостиница</p>
+            <b class="price">От 4000 ₽</b>
             <a class="button-details button" href="#">подробнее</a>
-            <button class="favourite-button-add button" type="button">
+            <button class="favourite-button button" type="button">
               в избранное
             </button>
             <p class="rating-value">
               <span class="visually-hidden">Четыре звезды</span>
-              <b>Рейтинг: 8,5</b>
+              <b class="rating">Рейтинг: 8,5</b>
             </p>
           </li>
 
@@ -181,15 +189,15 @@
                 alt="Радуга над горным хребтом">
               <h3 class="hotel-list-title">Villas at Poco Diablo</h3>
             </a>
-            <p>Гостиница</p>
-            <b>От 5000 ₽</b>
+            <p class="hotel-list-description">Гостиница</p>
+            <b class="price">От 5000 ₽</b>
             <a class="button-details button" href="#">подробнее</a>
-            <button class="favourite-button-add button" type="button">
-              в избранное
+            <button class="favourite-button-active button" type="button">
+              в избранном
             </button>
             <p class="rating-value">
               <span class="visually-hidden">Четыре звезды</span>
-              <b>Рейтинг: 9,2</b>
+              <b class="rating">Рейтинг: 9,2</b>
             </p>
           </li>
 
@@ -199,15 +207,15 @@
                 alt="Горы на фоне голубого неба">
               <h3 class="hotel-list-title">Desert Quail Inn</h3>
             </a>
-            <p>Гостиница</p>
-            <b>От 2500 ₽</b>
+            <p class="hotel-list-description">Гостиница</p>
+            <b class="price">От 2500 ₽</b>
             <a class="button-details button" href="#">подробнее</a>
-            <button class="favourite-button-add button" type="button">
+            <button class="favourite-button button" type="button">
               в избранное
             </button>
             <p class="rating-value">
               <span class="visually-hidden">Три звезды</span>
-              <b>Рейтинг: 6,9</b>
+              <b class="rating">Рейтинг: 6,9</b>
             </p>
           </li>
 
@@ -217,15 +225,15 @@
                 alt="Горы на фоне звездного неба">
               <h3 class="hotel-list-title">GreenTree Inn</h3>
             </a>
-            <p>Гостиница</p>
-            <b>От 1500 ₽</b>
+            <p class="hotel-list-description">Гостиница</p>
+            <b class="price">От 1500 ₽</b>
             <a class="button-details button" href="#">подробнее</a>
-            <button class="favourite-button-add button" type="button">
+            <button class="favourite-button button" type="button">
               в избранное
             </button>
             <p class="rating-value">
               <span class="visually-hidden">Две звезды</span>
-              <b>Рейтинг: 5,0</b>
+              <b class="rating">Рейтинг: 5,0</b>
             </p>
           </li>
         </ul>
@@ -253,8 +261,8 @@
       </section>
 
       <section class="subscription data-test">
-        <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">
+        <h2 class="subscription-title dark">Подпишитесь на рассылку</h2>
+        <p class="subscription-description dark">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -268,21 +276,24 @@
 
     <footer class="page-footer data-test">
       <section class="footer-social">
-        <h2 class="visually-hidden">Седона в социальных сетях</h2>
+        <h2 class="visually-hidden">Cоциальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
             <a class="social-link" href="#">
               <span class="visually-hidden">Вконтакте</span>
+              <span class="vkontacte-icon"></span>
             </a>
           </li>
           <li class="social-item">
             <a class="social-link" href="#">
               <span class="visually-hidden">Телеграм</span>
+              <span class="telegram-icon"></span>
             </a>
           </li>
           <li class="social-item">
             <a class="social-link" href="#">
               <span class="visually-hidden">Ютуб</span>
+              <span class="youtube-icon"></span>
             </a>
           </li>
         </ul>
@@ -292,6 +303,7 @@
 
       <a class="logo-academy" href="https://htmlacademy.ru/intensive/htmlcss">
         <span class="visualli-hidden">HTML Academy</span>
+        <span class="htmlacademy-icon"></span>
       </a>
     </footer>
   </body>
