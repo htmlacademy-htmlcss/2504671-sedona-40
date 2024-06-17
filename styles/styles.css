@@ -404,6 +404,18 @@ background-color: #83B3D333;
   color: #000000;
 }
 
+.select-control {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
+
+
+}
+
  /* Catalog-hotel */
 
  .catalog-hotel-title {
