@@ -20,13 +20,13 @@
         <nav class="page-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link" href="index.html" aria-current="page">Главная</a>
+              <a class="navigation-link current" href="index.html" aria-current="page">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">О Седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link current" href="catalog.html">Гостиницы</a>
+              <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
 
@@ -39,7 +39,9 @@
             <li class="navigation-item favourite-icon">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Избранное</span>
-                <span class="count-badge">12</span>
+                <span class="count-badge">
+                  <a class="count-badge-link" href="">12</a>
+                </span>
               </a>
             </li>
           </ul>
@@ -181,63 +183,70 @@
 
           <ul class="hotel-list">
             <li class="hotel-item">
-              <a class="hotel-list-link" href="#">
+              <a class="hotel-list-link-img" href="#">
                 <img class="hotel-list-img" src="images/hotels/hotel-1.jpg" width="300" height="212"
-                  alt="Звездное небо в расщелине гор">
-                <h3 class="hotel-list-title">Amara Resort & Spa</h3>
-              </a>
+                  alt="Звездное небо в расщелине гор"></a>
+                  <a class="hotel-list-link-title" href="#">
+                    <h3 class="hotel-list-title">Amara Resort & Spa</h3>
+                  </a>
               <p class="hotel-list-description">Гостиница</p>
               <b class="price">От 4000 ₽</b>
               <a class="button-details button" href="#">подробнее</a>
               <button class="favourite-button button" type="button">
                 в избранное
               </button>
-              <p class="rating-value">
-                <span class="visually-hidden">Четыре звезды</span>
-                <b class="rating">Рейтинг: 8,5</b>
+              <p class="hotel-stars">
+                <span class="star four-stars visually-hidden">Четыре звезды</span>
+                <span class="star four-stars"></span>
               </p>
+              <b class="rating">Рейтинг: 8,5</b>
             </li>
 
             <li class="hotel-item">
-              <a class="hotel-list-link" href="#">
+              <a class="hotel-list-link-img" href="#">
                 <img class="hotel-list-img" src="images/hotels/hotel-2.jpg" width="300" height="212"
-                  alt="Радуга над горным хребтом">
+                  alt="Радуга над горным хребтом"></a>
+                  <a class="hotel-list-link-title" href="#">
                 <h3 class="hotel-list-title">Villas at Poco Diablo</h3>
               </a>
               <p class="hotel-list-description">Гостиница</p>
               <b class="price">От 5000 ₽</b>
               <a class="button-details button" href="#">подробнее</a>
-              <button class="favourite-button-active button" type="button">
+              <button class="favourite-button active button" type="button">
                 в избранном
               </button>
-              <p class="rating-value">
+              <p class="hotel-stars">
                 <span class="visually-hidden">Четыре звезды</span>
-                <b class="rating">Рейтинг: 9,2</b>
+                <span class="star four-stars"></span>
               </p>
+              <b class="rating">Рейтинг: 9,2</b>
             </li>
 
             <li class="hotel-item">
-              <a class="hotel-list-link" href="#">
+              <a class="hotel-list-link-img" href="#">
                 <img class="hotel-list-img" src="images/hotels/hotel-3.jpg" width="300" height="212"
-                  alt="Горы на фоне голубого неба">
-                <h3 class="hotel-list-title">Desert Quail Inn</h3>
-              </a>
+                  alt="Горы на фоне голубого неба"> </a>
+                  <a class="hotel-list-link-title" href="#">
+                    <h3 class="hotel-list-title">Desert Quail Inn</h3>
+                  </a>
               <p class="hotel-list-description">Гостиница</p>
               <b class="price">От 2500 ₽</b>
               <a class="button-details button" href="#">подробнее</a>
               <button class="favourite-button button" type="button">
                 в избранное
               </button>
-              <p class="rating-value">
+              <p class="hotel-stars">
                 <span class="visually-hidden">Три звезды</span>
-                <b class="rating">Рейтинг: 6,9</b>
+                <span class="star three-stars"></span>
               </p>
+              <b class="rating">Рейтинг: 6,9</b>
             </li>
 
             <li class="hotel-item">
-              <a class="hotel-list-link" href="#">
+              <a class="hotel-list-link-img" href="#">
                 <img class="hotel-list-img" src="images/hotels/hotel-4.jpg" width="300" height="212"
-                  alt="Горы на фоне звездного неба">
+                  alt="Горы на фоне звездного неба"></a>
+                  <a class="hotel-list-link-title" href="#">
                 <h3 class="hotel-list-title">GreenTree Inn</h3>
               </a>
               <p class="hotel-list-description">Гостиница</p>
@@ -246,10 +255,11 @@
               <button class="favourite-button button" type="button">
                 в избранное
               </button>
-              <p class="rating-value">
+              <p class="hotel-stars">
                 <span class="visually-hidden">Две звезды</span>
-                <b class="rating">Рейтинг: 5,0</b>
+                <span class="star two-stars"></span>
               </p>
+                <b class="rating">Рейтинг: 5,0</b>
             </li>
           </ul>
 
