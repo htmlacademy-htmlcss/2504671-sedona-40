@@ -13,7 +13,7 @@
     <div class="page-container">
       <header class="page-header data-test">
         <a class="main-logo" href="index.html">
-          <img class="page-header-logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
+          <img src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
           <span class="visually-hidden">Логотип компании Седона, сервиса по бронированию отелей в городе
             Седона, штат Аризона, США</span>
         </a>
@@ -46,11 +46,8 @@
                 <svg class="favourite-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.9 19C9.6 19 9.3 18.9 9.1 18.6C3.7 12.5 2.4 11.1 2.1 10.7C1.4 9.8 1 8.6 1 7.4C1 4.4 3.4 2 6.5 2C7.8 2 9 2.5 10 3.3C11 2.5 12.3 2 13.5 2C16.5 2 19 4.4 19 7.4C19 8.7 18.5 9.9 17.7 10.8L10.7 18.7C10.5 18.9 10.3 19 9.9 19ZM3.9 9.5C4.2 9.9 7.4 13.5 10 16.4L16.2 9.4C16.7 8.9 16.9 8.2 16.9 7.4C16.9 5.6 15.4 4.1 13.6 4.1C12.6 4.1 11.6 4.6 10.9 5.4C10.6 5.7 10.3 5.8 10 5.8C9.7 5.8 9.4 5.6 9.2 5.4C8.5 4.6 7.5 4.1 6.5 4.1C4.7 4.1 3.2 5.6 3.2 7.4C3.1 8.3 3.5 9 3.9 9.5C3.8 9.5 3.8 9.5 3.9 9.5Z" fill="current" />
                 </svg>
-
-                <span class="count-badge">
-                  <a class="count-badge-link" href="">12</a>
-                </span>
               </a>
+                <span class="count-badge">12</span>
             </li>
           </ul>
         </nav>
@@ -74,7 +71,7 @@
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link">Гостиницы</a>
+                <a class="breadcrumbs-link" href="catalog.html">Гостиницы</a>
               </li>
             </ol>
           </header>
@@ -169,26 +166,75 @@
             <h2 class="catalog-hotel-title">
               Найдено гостиниц: <output>38</output>
             </h2>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+            <div class="select-control-wrapper">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+              <svg class="select-icon" aria-hidden="true" focusable="false" width="12" height="9" viewBox="0 0 12 9" fill="current" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.67501 7.71255L11.775 2.41255C12.075 2.11255 12.075 1.51255 11.775 1.21255C11.475 0.912549 10.875 0.912549 10.575 1.21255L6.07501 5.91255L1.57501 1.21255C1.27501 0.912549 0.675012 0.912549 0.375012 1.21255C0.175012 1.31255 0.0750122 1.61255 0.0750122 1.81255C0.0750122 2.01255 0.175012 2.21255 0.375012 2.41255L5.47501 7.71255C5.77501 8.11255 6.37501 8.11255 6.67501 7.71255Z" fill="current" />
+              </svg>
+            </div>
 
-            <ul class="view-button-list">
-              <li class="view-button-item tile-icon">
-                <a class="view-button-link current" href="catalog.html?view=tile">
+            <ul class="view-toggle-list">
+              <li class="view-toggle-item tile-icon">
+                <a class="view-toggle-link current" href="catalog.html?view=tile">
                   <span class="visually-hidden">Показать плиткой</span>
+                  <svg class="tile-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_119103_169)">
+                      <path d="M4 0H0V6H4V0Z" fill="black" />
+                      <path d="M16 0H12V6H16V0Z" fill="black" />
+                      <path d="M10 0H6V6H10V0Z" fill="black" />
+                      <path d="M4 8H0V14H4V8Z" fill="black" />
+                      <path d="M16 8H12V14H16V8Z" fill="black" />
+                      <path d="M10 8H6V14H10V8Z" fill="black" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_119103_169">
+                        <rect width="16" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                 </a>
               </li>
-              <li class="view-button-item card-icon">
-                <a class="view-button-link" href="catalog.html?view=tile">
+              <li class="view-toggle-item card-icon">
+                <a class="view-toggle-link" href="catalog.html?view=card">
                   <span class="visually-hidden">Показать карточками</span>
+                  <svg class="card-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_119103_278)">
+                      <path d="M16 12H0V14H16V12Z" fill="black" />
+                      <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_119103_278">
+                        <rect width="16" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
                 </a>
               </li>
-              <li class="view-button-item list-icon">
-                <a class="view-button-link" href="catalog.html?view=tile">
+              <li class="view-toggle-item list-icon">
+                <a class="view-toggle-link" href="catalog.html?view=list">
                   <span class="visually-hidden">Показать списком</span>
+                  <svg class="list-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_119103_295)">
+                      <path d="M2 0H0V2H2V0Z" fill="black" />
+                      <path d="M16 0H4V2H16V0Z" fill="black" />
+                      <path d="M2 4H0V6H2V4Z" fill="black" />
+                      <path d="M16 4H4V6H16V4Z" fill="black" />
+                      <path d="M2 8H0V10H2V8Z" fill="black" />
+                      <path d="M16 8H4V10H16V8Z" fill="black" />
+                      <path d="M2 12H0V14H2V12Z" fill="black" />
+                      <path d="M16 12H4V14H16V12Z" fill="black" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_119103_295">
+                        <rect width="16" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
                 </a>
               </li>
             </ul>
@@ -196,7 +242,7 @@
 
           <ul class="hotel-list">
             <li class="hotel-item">
-              <a class="hotel-list-link-img" href="#">
+              <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-1.jpg" width="300" height="212"
                   alt="Звездное небо в расщелине гор"></a>
                   <a class="hotel-list-link-title" href="#">
@@ -215,7 +261,7 @@
             </li>
 
             <li class="hotel-item">
-              <a class="hotel-list-link-img" href="#">
+              <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-2.jpg" width="300" height="212"
                   alt="Радуга над горным хребтом"></a>
                   <a class="hotel-list-link-title" href="#">
@@ -234,7 +280,7 @@
             </li>
 
             <li class="hotel-item">
-              <a class="hotel-list-link-img" href="#">
+              <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-3.jpg" width="300" height="212"
                   alt="Горы на фоне голубого неба"> </a>
                   <a class="hotel-list-link-title" href="#">
@@ -253,7 +299,7 @@
             </li>
 
             <li class="hotel-item">
-              <a class="hotel-list-link-img" href="#">
+              <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-4.jpg" width="300" height="212"
                   alt="Горы на фоне звездного неба"></a>
                   <a class="hotel-list-link-title" href="#">
@@ -286,7 +332,7 @@
                 <a class="pagination-link" href="#">4</a>
               </li>
               <li class="pagination-item">
-                <span class="pagination-all">...</span>
+                <span class="pagination-all disabled">...</span>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
@@ -325,7 +371,7 @@
             <a class="social-link-tg" href="#">
               <span class="visually-hidden">Телеграмм</span>
               <svg width="18" height="16" viewBox="0 0 18 16" fill="current" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.785 0.955705L0.840489 7.1042C-0.247661 7.54126 -0.241365 8.14828 0.640845 8.41897L4.73445 9.69597L14.2058 3.72014C14.6537 3.44766 15.0629 3.59424 14.7265 3.89281L7.05283 10.8183H7.05103L7.05283 10.8192L6.77045 15.0387C7.18413 15.0387 7.36669 14.8489 7.59871 14.625L9.58705 12.6915L13.7229 15.7464C14.4855 16.1664 15.0332 15.9506 15.2229 15.0405L17.9379 2.2453C18.2158 1.13107 17.5126 0.626562 16.785 0.955705Z" fill="#current" />
+                <path d="M16.785 0.955705L0.840489 7.1042C-0.247661 7.54126 -0.241365 8.14828 0.640845 8.41897L4.73445 9.69597L14.2058 3.72014C14.6537 3.44766 15.0629 3.59424 14.7265 3.89281L7.05283 10.8183H7.05103L7.05283 10.8192L6.77045 15.0387C7.18413 15.0387 7.36669 14.8489 7.59871 14.625L9.58705 12.6915L13.7229 15.7464C14.4855 16.1664 15.0332 15.9506 15.2229 15.0405L17.9379 2.2453C18.2158 1.13107 17.5126 0.626562 16.785 0.955705Z" fill="current" />
               </svg>
             </a>
           </li>
@@ -334,7 +380,7 @@
             <a class="social-link-youtube" href="#">
               <span class="visually-hidden">Ютуб</span>
               <svg width="23" height="18" viewBox="0 0 23 18" fill="current" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.9402 0.356445H3.50738C1.64668 0.356445 0.333252 1.9502 0.333252 3.75645V13.8502C0.333252 15.7627 1.64668 17.3564 3.50738 17.3564H19.1591C20.8009 17.3564 22.3333 15.7627 22.3333 13.9564V3.75645C22.1143 1.9502 20.8009 0.356445 18.9402 0.356445ZM7.99494 12.8939V4.81894L15.3283 8.85645L7.99494 12.8939Z" fill="#current" />
+                <path d="M18.9402 0.356445H3.50738C1.64668 0.356445 0.333252 1.9502 0.333252 3.75645V13.8502C0.333252 15.7627 1.64668 17.3564 3.50738 17.3564H19.1591C20.8009 17.3564 22.3333 15.7627 22.3333 13.9564V3.75645C22.1143 1.9502 20.8009 0.356445 18.9402 0.356445ZM7.99494 12.8939V4.81894L15.3283 8.85645L7.99494 12.8939Z" fill="current" />
               </svg>
             </a>
           </li>
