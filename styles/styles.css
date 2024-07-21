@@ -77,13 +77,6 @@ body {
  transition: background-color 0.4s;
 }
 
-.button:disabled{
-  background-color: #e5e5e5;
-  color: #ffffff;
-  outline: none;
-  cursor: default;
-}
-
 input {
   transition: background-color 0.4s;
 }
@@ -1344,17 +1337,19 @@ justify-content: center;
 
 .hotel-item:hover {
   transform: scale(1.01);
+  transition: scale 0.4s;
+
 }
 
 .hotel-item:focus-visible {
   transform: scale(1.01);
+  transition: scale 0.4s;
 }
 .hotel-item:active {
   opacity: 0.6;
   transform: scale(1);
+  transition: scale 0.4s;
 }
-
-
 
  .hotel-list-img {
   display: block;
@@ -1486,7 +1481,7 @@ justify-content: center;
 }
 
 
- /* Pagination */-
+ /* Pagination */
 
  .pagination {
   margin: 0;
