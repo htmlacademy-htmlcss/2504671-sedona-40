@@ -74,8 +74,18 @@ body {
  border: none;
  cursor: pointer;
  overflow: hidden;
- /* transition: transform 0.4s ease-in-out; */
- transition: background-color 0.3s;
+ transition: background-color 0.4s;
+}
+
+.button:disabled{
+  background-color: #e5e5e5;
+  color: #ffffff;
+  outline: none;
+  cursor: default;
+}
+
+input {
+  transition: background-color 0.4s;
 }
 
 
@@ -149,7 +159,7 @@ body {
 .navigation-link.current::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: -1px;
   right: 0px;
   left:0px;
   height: 2px;
@@ -1151,7 +1161,6 @@ background: #ffffff;
   cursor: default;
 }
 
-
 .catalog-button-reset {
   background-color: transparent;
   padding: 8px 16px;
@@ -1434,6 +1443,13 @@ justify-content: center;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.favourite-button:disabled {
+  background-color: transparent;
+  color: #E5E5E5;
+  outline: none;
+  cursor: default;
+}
+
 
 .favourite-button.active {
   background-color: #7db54f;
@@ -1462,8 +1478,15 @@ justify-content: center;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.button-details:disabled {
+  background-color: transparent;
+  color: #E5E5E5;
+  outline: none;
+  cursor: default;
+}
 
- /* Pagination */
+
+ /* Pagination */-
 
  .pagination {
   margin: 0;
@@ -1534,6 +1557,9 @@ justify-content: center;
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 2;
 }
+.modal-container:target {
+  display: block;
+}
 
 .modal {
   position: relative;
@@ -1548,9 +1574,15 @@ justify-content: center;
   gap: 64px;
 }
 
-.modal-container:target {
-  display: block;
+.modal-title {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
 }
+
 .button-modal-close {
   position: absolute;
   top: 64px;
@@ -1579,16 +1611,7 @@ grid-template-rows: repeat(4, auto);
 gap: 48px;
 }
 
-.modal-title {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-.field-group{
+.modal-search-field {
   position: relative;
   display: flex;
   align-items: center;
@@ -1596,8 +1619,8 @@ gap: 48px;
   padding:0;
 }
 
-.field-group input,
-.number-wrapper input {
+.modal-search-field input[type="text"],
+.modal-search-field input[type="number"] {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1617,109 +1640,32 @@ gap: 48px;
   text-align: left;
 }
 
+.modal-search-form input[type="text"]:hover,
+.modal-search-form input[type="text"]:focus-visible {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.6);
+}
+.modal-search-form input[type="number"]:hover,
+.modal-search-form input[type="number"]:focus-visible {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-search-form input::placeholder {
+  font-weight: 400;
+
+}
+
+/*Стилизация полей ввода с датами заеда/выезда*/
+
  .arrival-input,
- .departure-input{
+ .departure-input {
   padding: 12px 20px;
   min-width: 440px;
   margin-left: auto;
 }
-.button-minus +.adults-input,
-.button-minus + .child-input {
-  padding: 14px 3px;
-  line-height: 20px;
-  text-align: center;
-  max-width: 31px;
-  max-height: 48px;
-  border-radius: 0;
-}
 
-.modal-search-form input:hover,
-.modal-search-form input:focus-visible {
-  background-color: #E6E6E6;
-}
-.modal-search-form input:active {
-  background-color: #E6E6E6;
-  opacity: 0.3;
-}
-
-
-.adults-label,
-.child-label  {
-  margin-right: 46px;
-}
-.child-label {
-  margin-left: auto;
-  margin-right: 82px;
-}
-
-
-/* Убираем стрелки */
-.field-group input[type="number"]::-webkit-inner-spin-button,
-.field-group input[type="number"]::-webkit-outer-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-.button-minus,
-.button-plus {
-  width: 40px;
-  height: 48px;
-  background-color: #f2f2f2;
-  padding: 10px 14px;
-}
-
-.button-minus {
-  border-radius: 4px 0 0 4px;
-  background-image: url("../images/icons/minus.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 14px 14px;
-}
-
-.button-plus {
-border-radius: 0 4px 4px 0;
-background-image: url("../images/icons/plus.svg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: 14px 14px;
-}
-
-.button-plus:hover,
-.button-plus:focus-visible,
-.button-minus:hover,
-.button-minus:focus-visible  {
-  background-color: #E6E6E6;;
-  color: rgba(0, 0, 0, 0.3)
-
-}
-.button-plus:active,
-.button-minus:active {
-  background-color: #E6E6E6;
-  opacity: 0.6;
-}
-
-/* .child-label {
-  position: relative;
-  padding-right: 36px;
-} */
-/* .child-label::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 50%;
-  transform: translateX(23px);
-  width: 26px;
-  height: 26px;
-  background-image: url("../images/icons/info.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 2px 12px;
-  background-color: #83B3D3;
-  border-radius: 50%;
-} */
-
-.modal-search-form .field-group:first-child::after,
-.modal-search-form .field-group:nth-child(2)::after{
+.modal-search-field:first-child::after,
+.modal-search-field:nth-child(2)::after {
   position: absolute;
   content: "";
   top: 50%;
@@ -1727,18 +1673,91 @@ background-size: 14px 14px;
   transform: translate(-50%, -50%);
   width: 16px;
   height: 15px;
-  background-image: url("../images/icons/calendar.svg");
+  mask-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 14px 14px;
+  background-color: rgba(117, 97, 87, 0.3);
   cursor: pointer;
 }
 
+/*Стилизация полей ввода для количества взрослых и детей*/
 
-.modal-search-form input::placeholder {
-  font-weight: 400;
+/* Убираем стрелки */
+
+.modal-search-field input[type="number"]::-webkit-inner-spin-button,
+.modal-search-field input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.modal-search-form input[type="number"] {
+  appearance: textfield;
+  text-align: center;
 }
 
-/* Кнопка найти */
+.input-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 110px;
+height: 48px;
+background-color: #f2f2f2;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.children-input,
+.adults-input {
+  width: 31px;
+  height: 48px;
+  padding: 14px 2px;
+  background-color: transparent;
+}
+
+.button-minus,
+.button-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 48px;
+  padding: 10px;
+  background-color: transparent;
+
+}
+
+.button-minus svg,
+.button-plus svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+  .button-plus:hover svg,
+  .button-plus:focus-visible svg,
+  .button-minus:hover svg,
+  .button-minus:focus-visible svg  {
+    fill: #000000;
+  }
+  .button-plus:active,
+  .button-minus:active {
+    opacity: 0.6;
+  }
+
+
+  .adults-label {
+margin-right: 46px;
+  }
+  .modal-search-field div:first-of-type {
+    margin-right: 88px;
+  }
+  .modal-search-field div:last-of-type {
+    margin-left: auto;
+
+  }
+  .modal-search-tooltip {
+    margin-left: 10px;
+  }
+
+/* кнопка Найти */
+
 .button-modal-search {
   font-size: 20px;
   line-height: 24px;
@@ -1756,42 +1775,37 @@ background-size: 14px 14px;
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
-
-/* Тултип  */
-
-.tooltip-wrapper {
-  position: relative;
-}
-.tooltip-toggle {
-  /* display: none; */
-  position: relative;
-  appearance: none;
+.button-modal-search:disabled{
+  background-color: #e5e5e5;
+  color: #ffffff;
+  outline: none;
+  cursor: default;
 }
 
-.tooltip-toggle::after{
-position: absolute;
-content: "";
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto;
 
-transform: translateX(-62px);
-width: 26px;
-height: 26px;
-background-image: url("../images/icons/info.svg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: 2px 12px;
-background-color: #83B3D3;
-border-radius: 50%;
+
+/* Тултип и сообщения */
+
+.modal-search-tooltip {
+  position: relative;
+}
+
+.tooltip-button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #82b3d3;
+  background-image: url("../images/icons/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .tooltip-text {
   position: absolute;
   display: none;
-  transform: translate(-200px, 40px);
+  top: 43px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 16px;
   line-height: 20px;
   text-align: left;
@@ -1804,6 +1818,52 @@ border-radius: 50%;
   padding: 15px 22px;
 }
 
-.tooltip-toggle:checked + label + .tooltip-text{
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 19px;
+  height: 19px;
+  background-color: #333333;
+}
+
+.error {
+  color: #FF5757;
+}
+
+.date-alert{
+  position: absolute;
+  display: none;
+  font-size: 16px;
+  color: #333333;
+  max-width: 400px;
+  text-align: justify;
+  overflow-wrap: break-word;
+  top: 100%;
+  transform: translateX(157px);
+}
+
+.date-alert.error {
+color: #FF5757;
+}
+
+
+.arrival-input[aria-invalid="true"] + .date-alert,
+.departure-input[aria-invalid="true"] + .date-alert {
+  display: block;
+}
+
+.arrival-input:valid + .date-alert,
+.departure-input:valid + .date-alert {
+  display: block;
+}
+
+.tooltip-button:hover + .tooltip-text {
+  display: block;
+}
+
+.modal-search-tooltip:focus-within .tooltip-text {
   display: block;
 }
