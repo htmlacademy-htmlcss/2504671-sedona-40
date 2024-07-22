@@ -8,7 +8,6 @@
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <title>Гостиницы Седоны</title>
   </head>
-
   <body>
     <div class="page-container">
       <header class="page-header data-test">
@@ -17,7 +16,6 @@
           <span class="visually-hidden">Логотип компании Седона, сервиса по бронированию отелей в городе
             Седона, штат Аризона, США</span>
         </a>
-
         <nav class="page-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -30,7 +28,6 @@
               <a class="navigation-link current" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-
           <ul class="navigation-user-list">
             <li class="navigation-user-item">
               <a class="navigation-link" href="#">
@@ -53,10 +50,7 @@
         </nav>
         <a class="header-button button" href="#">Хочу сюда!</a>
       </header>
-
-
       <main class="main-container data-test">
-
         <div class="inner-header-wrapper">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -75,17 +69,12 @@
               </li>
             </ol>
           </header>
-
           <section class="catalog-filter data-test">
             <h2 class="visually-hidden">Поиск гостиниц</h2>
-
-
               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-<!-- checkbox -->
                 <div class="left-columns">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Инфраструктура</legend>
-
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
@@ -103,14 +92,13 @@
                     </li>
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
+                        <input class="control-input visually-hidden" type="checkbox" name="wi-fi" required>
                         <span class="control-mark"></span>
                         <span class="control-label">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
                 </fieldset>
-<!-- radio -->
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Тип Жилья</legend>
                   <ul class="catalog-filter-list">
@@ -138,18 +126,14 @@
                   </ul>
                 </fieldset>
               </div>
-
-<!-- range -->
               <fieldset class="catalog-filter-group range-column">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-
                 <div class="range-wrapper-inputs">
                 <label class="price-min" for="price-min"></label>
             <input type="number" id="price-min" min="0" max="9000" value="0" name="price-min" placeholder="0">
                 <label class="price-max" for="price-max"></label>
           <input type="number" id="price-max" min="0" max="9000" value="9000" name="price-max" placeholder="9000">
          </div>
-
               <div class="range-scale">
                <div class="range-bar" style="left: 0px; width: 226px">
                 <button class="range-toggle toggle-min" type="button">
@@ -161,31 +145,26 @@
                </div>
               </div>
               </fieldset>
-
               <fieldset class="catalog-filter-group button-column">
                 <legend class="catalog-filter-title visually-hidden">Кнопки</legend>
-                <button class="button catalog-button-submit" type="submit" >
+                <button class="button catalog-button-submit" type="submit">
                   Применить
                 </button>
                 <button class="button catalog-button-reset" type="reset">
                   Сбросить
                 </button>
               </fieldset>
-
             </form>
           </section>
         </div>
-
-
         <section class="catalog-hotel data-test">
-
           <div class="container-sort">
             <h2 class="catalog-hotel-title">
               Найдено гостиниц: <output>38</output>
             </h2>
             <div class="select-control-wrapper">
-              <select class="select-control" aria-label="Сортировка" required>
-                <option value="cheap">Сначала дешевые</option>
+              <select class="select-control" aria-label="Сортировка" required size="3">
+                <option value="cheap" selected>Сначала дешевые</option>
                 <option value="expensive">Сначала дорогие</option>
                 <option value="popular">Сначала популярные</option>
               </select>
@@ -193,7 +172,6 @@
                 <path d="M6.67501 7.71255L11.775 2.41255C12.075 2.11255 12.075 1.51255 11.775 1.21255C11.475 0.912549 10.875 0.912549 10.575 1.21255L6.07501 5.91255L1.57501 1.21255C1.27501 0.912549 0.675012 0.912549 0.375012 1.21255C0.175012 1.31255 0.0750122 1.61255 0.0750122 1.81255C0.0750122 2.01255 0.175012 2.21255 0.375012 2.41255L5.47501 7.71255C5.77501 8.11255 6.37501 8.11255 6.67501 7.71255Z" fill="current" />
               </svg>
             </div>
-
             <ul class="view-toggle-list">
               <li class="view-toggle-item tile-icon">
                 <a class="view-toggle-link current" href="catalog.html?view=tile">
@@ -251,12 +229,10 @@
                       </clipPath>
                     </defs>
                   </svg>
-
                 </a>
               </li>
             </ul>
           </div>
-
           <ul class="hotel-list">
             <li class="hotel-item" tabindex="0">
               <a class="hotel-list-link-img" href="#" tabindex="-1">
@@ -276,7 +252,6 @@
               </p>
               <p class="rating">Рейтинг: 8,5</p>
             </li>
-
             <li class="hotel-item" tabindex="0">
               <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-2.jpg" width="300" height="212"
@@ -295,7 +270,6 @@
               </p>
               <p class="rating">Рейтинг: 9,2</p>
             </li>
-
             <li class="hotel-item" tabindex="0">
               <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-3.jpg" width="300" height="212"
@@ -314,7 +288,6 @@
               </p>
               <p class="rating">Рейтинг: 6,9</p>
             </li>
-
             <li class="hotel-item" tabindex="0">
               <a class="hotel-list-link-img" href="#" tabindex="-1">
                 <img class="hotel-list-img" src="images/hotels/hotel-4.jpg" width="300" height="212"
@@ -334,7 +307,6 @@
                 <p class="rating">Рейтинг: 5,0</p>
             </li>
           </ul>
-
             <ul class="pagination">
               <li class="pagination-item">
                 <a class="pagination-link current" href="#">1</a>
@@ -354,10 +326,8 @@
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
               </li>
-
             </ul>
         </section>
-
         <section class="subscription data-test">
           <h2 class="subscription-title dark">Подпишитесь на рассылку</h2>
           <p class="subscription-description dark">
@@ -371,10 +341,8 @@
           </form>
         </section>
       </main>
-
       <footer class="page-footer data-test">
         <h2 class="visually-hidden">Cоциальные сети</h2>
-
         <ul class="social-list">
           <li class="social-list-item">
             <a class="social-link-vk" href="#">
@@ -392,7 +360,6 @@
               </svg>
             </a>
           </li>
-
           <li class="social-list-item">
             <a class="social-link-youtube" href="#">
               <span class="visually-hidden">Ютуб</span>
@@ -402,9 +369,7 @@
             </a>
           </li>
         </ul>
-
         <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-
         <a class="logo-academy-icon" href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">HTML Academy</span>
           <svg width="115" height="34" viewBox="0 0 115 34" fill="current" xmlns="http://www.w3.org/2000/svg">
