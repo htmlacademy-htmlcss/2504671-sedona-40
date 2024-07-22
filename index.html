@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header home data-test">
+      <header class="page-header home" data-test="header">
         <a class="main-logo" aria-current="page">
           <img src="images/logo-sedona.svg" width="140" height="70" alt="Логотип Седона">
           <span class="visually-hidden">Логотип компании Седона, сервиса по бронированию отелей в городе
@@ -56,8 +56,8 @@
         </nav>
         <a class="header-button button" href="#">Хочу сюда!</a>
       </header>
-      <main class="main-container data-test">
-        <section class="hero data-test">
+      <main class="main-container" data-test="main">
+        <section class="hero" data-test="hero">
           <h1 class="visually-hidden">
             Компания Седона, сервис по бронированию отелей в городе Седона, штат
             Аризона, США
@@ -65,7 +65,7 @@
           <img class="hero-img" src="images/icons/welcome.svg"
             alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!" width="458" height="352">
         </section>
-        <section class="advantages data-test">
+        <section class="advantages" data-test="advantages">
           <h2 class="advantages-title">
             Седона — небольшой городок в Аризоне, заслуживающий большего!
           </h2>
@@ -123,7 +123,7 @@
             </li>
           </ul>
         </section>
-        <section class="services">
+        <section class="services" data-test="service">
           <h2 class="services-title">
             Приезжайте в Седону отдохнуть в комфорте и уюте!
           </h2>
@@ -154,7 +154,7 @@
             </li>
           </ul>
         </section>
-        <section class="search data-test">
+        <section class="search" data-test="search">
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-description">
             Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие
@@ -162,7 +162,7 @@
           </p>
           <a class="search-button button" href="#open-modal">Поиск гостиницы в Седоне</a>
         </section>
-        <section class="subscription subscription-bgimage">
+        <section class="subscription subscription-bgimage" data-test="subscribe">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-description">
             Только полезная информация и никакого спама, честное бойскаутское!
@@ -171,11 +171,11 @@
             <label class="subscription-email visually-hidden" for="subscription-email">Укажите Ваш e-mail</label>
             <input class="subscription-email-field" type="email" name="subscription-email" id="subscription-email"
               placeholder="Ваш e-mail" required>
-            <button class="subscription-button button" type="submit">Подписаться</button>
+            <button class="subscription-button button" type="submit" disabled>Подписаться</button>
           </form>
         </section>
       </main>
-      <footer class="page-footer data-test">
+      <footer class="page-footer" data-test="footer">
         <h2 class="visually-hidden">Cоциальные сети</h2>
         <ul class="social-list">
           <li class="social-list-item">
