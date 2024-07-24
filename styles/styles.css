@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: > 2% and last 1 version
-*/
-
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -257,8 +250,9 @@ input:disabled,
 .header-button {
   display: block;
   padding: 8px 16px;
-  min-width: 160px;
-  align-self: center;
+  width: 100%;
+  max-width: 160px;
+  min-height: 36px;
   margin-left: 33px;
 }
 
@@ -405,7 +399,7 @@ background-color: rgba(255, 255, 255, 0.3);
   background-color: #83b3d333;
 }
 
-.advantages-item-extended:nth-child(odd) {
+.advantages-item.advantages-item-extended {
   color: #ffffff;
   background-color: #82b3d3;
 }
@@ -451,6 +445,7 @@ background-color: rgba(255, 255, 255, 0.3);
 
 .services-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 0;
